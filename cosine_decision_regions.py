@@ -15,6 +15,16 @@ def maximal_minors(W, eps=1e-10):
     return minors
 
 
+def colspace(W, eps=1e-10):
+    N, D = W.shape
+    assert N >= D
+    L, s, R = np.linalg.svd(W, full_matrices=True)
+    rank = np.sum(s > eps)
+    assert rank <= D
+    L = L[:, :rank] * np.sqrt(s[:rank])
+    return L
+
+
 def braid(n):
     B = np.zeros((math.comb(n, 2), n))
     for i, (l, r) in enumerate(itertools.combinations(range(n), 2)):
@@ -58,9 +68,7 @@ if __name__ == "__main__":
     else:
         G = gram_matrix(W)
 
-    L, s, R = np.linalg.svd(G, full_matrices=True)
-    rank = np.sum(s > EPS)
-    L = L[:, :rank] * np.sqrt(s[:rank])
+    L = colspace(G, eps=EPS)
 
     maxm_W = np.sign(np.array(maximal_minors(W)))
     maxm_L = np.sign(np.array(maximal_minors(L)))

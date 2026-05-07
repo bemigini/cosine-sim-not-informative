@@ -1,7 +1,7 @@
 
 """
 
-An example of how chenging the lengths of the 
+An example of how changing the lengths of the 
 unembeddings can change the rankings.
 Therefore, all pairwise cosine similarities
 between unembeddings will not give the possible 

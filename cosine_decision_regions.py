@@ -1,3 +1,13 @@
+"""
+
+Checks that 
+- C(W) gives the same decision regions as a sigmoid classifier with unembeddings W.
+- C(BW) gives the same decision regions as a softmax classifier with unembeddings W,
+    where B is the braid matrix.
+
+"""
+
+
 import math
 import argparse
 import itertools

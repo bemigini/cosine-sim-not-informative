@@ -1,3 +1,12 @@
+"""
+
+Example where for two matrices of unembeddings W, W',
+their signpatterns are the same, but their ranking patterns are different.
+
+
+"""
+
+
 import math
 import itertools
 import numpy as np

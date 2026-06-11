@@ -1,4 +1,4 @@
-# How not to use Cosine Similarity between Label Representations
+# What Cosine Similarity of Label Representations Can and Cannot Tell us
 Code with examples and plots relating to the article ["What Cosine Similarity of Label Representations Can and Cannot Tell us"](https://arxiv.org/abs/2603.29488) by Beatrix M. G. Nielsen and Andreas Grivas. 
 
 
